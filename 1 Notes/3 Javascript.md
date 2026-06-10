@@ -52,9 +52,7 @@ Arrays are very similar to python, no limit to data types, and you can push and 
 ![[Screenshot 2026-06-09 at 8.51.14 PM.png|500]]
 
 
-Javascript (if, while, for) looks basically like C.
-
-However, javascript doesn't have 'classes', it however does again, have something that looks remarkably like C.
+Javascript (if, while, for) looks basically like C in a lot of ways, and it looks like python in others. However, javascript doesn't have 'classes', it however does again, have something that looks remarkably like C.
 
 This is C.
 
@@ -87,4 +85,75 @@ So you can use the spread operator `...` and copy things over.
 
 ![[Screenshot 2026-06-09 at 9.26.50 PM.png]]
 
+---
+## Functions and Objects
 
+In javascript, there's 2 ways to define a function, a C like syntax, and a `=>` syntax.
+
+![[Pasted image 20260610100931.png|500]]
+
+Now, what's the difference? Why bother? Let's start first with regular functions, which look identical to C
+
+```c
+// C
+int add(int a, int b) {
+    return a + b;
+}
+```
+
+```js
+// JavaScript
+function add(a, b) {
+    return a + b;
+}
+```
+
+Same `{}` braces, same `return`, same `(parameters)` syntax. The only difference is C needs a return type (`int`) before the function name, while JS uses the `function` keyword instead.
+
+You call them the same way too:
+
+```c
+int result = add(3, 5);
+```
+
+```js
+let result = add(3, 5);
+```
+
+
+As for object oriented programming support, Python lets you do this with `self`, to reference to the object itself.
+
+```python
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):                
+        print(f"Hi, {self.name}")
+
+alex = Person("Alex")
+alex.greet() # "Hi, Alex"                     
+```
+
+JavaScript tries to do the same with regular functions and `this`:
+
+```js
+const person = {
+    name: "Alex",
+    greet: function() {
+        console.log("Hi, " + this.name);
+    }
+};
+
+person.greet(); //"Hi, Alex" 
+```
+
+(I still don't really understand the point of arrow functions, my bad)
+
+
+Since MIT web lab uses the arrow function in general... this is the syntax for how it works:
+
+![[Screenshot 2026-06-10 at 11.15.26 AM.png|500]]
+
+- `name`: celsiusToFahrenheit
+- `parameters`: (tempCelsius)
+- `body`: not gonna copy it lol
