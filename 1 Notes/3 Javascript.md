@@ -60,7 +60,7 @@ This is C.
 
 This is javascript.
 
-![[Screenshot 2026-06-09 at 9.00.55 PM.png|300]]
+![[Screenshot 2026-06-09 at 9.00.55 PM.png|200]]
 
 You access it through a similar fashion to C as well, but also this python-ish syntax of `[]`.
 
