@@ -202,4 +202,74 @@ Then it's by some decision that we pick and choose which comment to render! Mayb
 
 While we visually see the idea of React, we have 0% understanding of how to actually work with it. We theoretically know what's the point of React, but we have never ever touched React yet.
 
-So... what we waiting around for?
+So... what we waiting around for? Let's go! Say we are trying to make this little components of a comment.
+
+![[Screenshot 2026-06-19 at 5.36.24 PM.png|300]]
+
+By default, it's just a name + a content.
+
+![[Screenshot 2026-06-19 at 5.38.01 PM.png|300]]
+
+And in using React, we have to import the library, define the component, and export it.
+
+![[Screenshot 2026-06-21 at 10.24.28 AM.png|500]]
+
+As for the body of the component... it's just like a function, right? It should take in the props, the data, and output it in some format that we want, in this case the comment.
+
+![[Screenshot 2026-06-21 at 10.26.47 AM.png|500]]
+
+And so, assuming we set up the props correctly, all we need to do is return a div, with html inside.
+- The reason it's all inside a div is because javascript functions only allows you to return 1 thing, and so... we just stuff everything inside a div.
+
+![[Screenshot 2026-06-21 at 10.32.38 AM.png|500]]
+
+Also... it's not returning html! If you look carefully, it's something else called JSX, which if we recall what a prop is, it's just a java script class, and so returning a class's attribute is just returning some javascript data.
+
+![[Screenshot 2026-06-21 at 10.33.04 AM.png|500]]
+
+On top of that, we can also add a state to this component, like whether if we liked the comment or not.
+
+![[Screenshot 2026-06-21 at 10.36.10 AM.png|500]]
+
+This could easily be done with the addition of a little list (did we like something or not), and then jus returning the state of either `liked` or `like`.
+
+![[Screenshot 2026-06-21 at 10.49.15 AM.png|500]]
+
+---
+## Wrap Up Example
+
+So, recalling from the example from the beginning of the class, how would someone make this facebook-like page?
+
+![[Screenshot 2026-06-21 at 11.26.56 AM.png|500]]
+
+Well... it looks like a lot at first, but when we break it down into it's components, it's not as difficult as it seems.
+
+![[Screenshot 2026-06-21 at 11.27.20 AM.png|500]]
+
+
+First is the `<App />` component, as we see, it's just made up of `<NavBar />`, `<Intro />`, `<Photos />`, `<Post />`.
+
+![[Screenshot 2026-06-21 at 11.29.49 AM.png|500]]
+
+
+Starting from `<Intro />`, it has a `studies at xxx` text, and a `from xxx` text, we can get those values from props.
+
+![[Screenshot 2026-06-21 at 12.29.05 PM.png|500]]
+
+
+As for `<Photos />`, we can have a map function that maps images into a jsx format of `<img/>`.
+
+![[Screenshot 2026-06-21 at 12.30.48 PM.png|500]]
+
+
+Next is `<Post />`, this is pretty standard to what we had so far, nothing new.
+
+![[Screenshot 2026-06-21 at 12.32.28 PM.png|500]]
+
+
+And then we have this `state` of liking the post or not, to trigger about re-rendering.
+
+![[Screenshot 2026-06-21 at 12.33.26 PM.png|500]]
+
+
+So... frontend isn't that crazy! React helped us organize the entire thing mentally a lot.
