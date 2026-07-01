@@ -197,6 +197,8 @@ Then it's by some decision that we pick and choose which comment to render! Mayb
 
 ![[Screenshot 2026-06-17 at 10.07.37 PM.png|300]]
 
+We will go into states a lot more detailed in the next note.
+
 ---
 ## An Actual Example
 
