@@ -136,7 +136,6 @@ As we can see, state is the only memory for this component, and during the rende
 
 ![[Screenshot 2026-06-25 at 8.31.20 AM.png|500]]
 
-
 Let's keep cooking the steak! The steak goes from raw → rare → medium → burnt "congratulation" steak, and we've hit the end on how well we can cook it, the send back to kitchen button gets deleted.
 
 ![[Screenshot 2026-06-25 at 8.41.29 AM.png|400]]
@@ -144,7 +143,6 @@ Let's keep cooking the steak! The steak goes from raw → rare → medium → bu
 In this process, we just repeatedly come to the `state change` once, `stage change` again, `state change` and another one... cycle, but here instead of mounting, the trigger is a state update.
 
 ![[Screenshot 2026-06-25 at 8.42.42 AM.png|500]]
-
 
 What happens when we click the `Delete Steak` button now? The steak image is gone! We have `dismounted` the component entirely.
 
@@ -164,21 +162,17 @@ Another way to understand it is that the DOM is the live representation of the p
 
 ![[Screenshot 2026-06-27 at 10.13.45 PM.png|300]]
 
-
 But, just as we know that React creates these 'fake' html tags for the sake of re-usability, it also creates a 'fake', virtual DOM that represents the structure of your UI.
 
 ![[Screenshot 2026-06-27 at 10.30.35 PM.png|300]]
-
 
 Now, how does this DOM interact throughout the component life cycle? Well, we start by mounting the component, which really means adding a component to the DOM.
 
 ![[Screenshot 2026-06-27 at 10.31.36 PM.png|500]]
 
-
 Then whenever we have a trigger that causes the component to update, we re-render this component with the new values on the DOM.
 
 ![[Screenshot 2026-06-27 at 10.33.06 PM.png|500]]
-
 
 Lastly, whenever we need this component to go, we remove it from the DOM.
 
