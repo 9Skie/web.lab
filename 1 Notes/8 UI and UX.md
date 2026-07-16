@@ -55,6 +55,7 @@ Some on Figma (I don't really care about this yet).
 ![[Pasted image 20260630220654.png|500]]
 
 Since we are not going into Figma (cmon kids, do frontend the naive way) for now, this note ends here.
+- No doing it the naive way is so annoying kill me
 
 Figma does make things look 'pretty' but I'm pretty sure it's just hiding frontend code underneath, which I think is cooler if you know how it works.
 
